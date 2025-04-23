@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kita Berdua</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Plugins -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4f46e5',
+            accent: '#10b981',
+            background: '#f1f5f9',
+            text: '#1e293b',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-text font-sans">
+  <header class="text-center py-8 bg-pink-200 text-white">
+    <h1 class="text-4xl font-bold">Kita Berdua 💞</h1>
+    <p class="text-lg mt-2">Cerita indah yang tak akan pernah selesai</p>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-8 space-y-12">
+    <!-- Waktu Pacaran -->
+    <section class="text-center">
+      <h2 class="text-2xl font-semibold mb-2">Sudah Berapa Lama Kita Bersama?</h2>
+      <p id="timer" class="text-xl font-mono text-accent"></p>
+    </section>
+
+    <!-- Galeri Kita -->
+    <section class="h-auto w-auto p-6 bg-pink-200 rounded-xl shadow-md">
+      <h2 class="text-2xl font-semibold mb-4">Galeri Kita 📸</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="foto1.jpg" class="rounded-xl shadow aspect-square" alt="Galeri 1">
+        <img src="foto2.jpg" class="rounded-xl shadow aspect-square" alt="Galeri 2">
+        <img src="foto3.jpg" class="rounded-xl shadow aspect-square" alt="Galeri 3">
+      </div>
+    </section>
+
+    <!-- Chat Pertama -->
+    <section class="h-auto w-auto p-6 bg-pink-200 rounded-xl shadow-md">
+      <h2 class="text-2xl font-semibold mb-4">Chat Pertama Kita 💬</h2>
+      <div class="bg-white rounded-xl p-4 shadow">
+        <p class="italic">"Hai, kamu suka senja juga ya?"</p>
+        <p class="text-right text-sm mt-2 text-gray-500">- Kamu, waktu itu</p>
+      </div>
+    </section>
+
+    <!-- Foto Kesukaan Kita -->
+    <section class="h-auto w-auto p-6 bg-pink-200 rounded-xl shadow-md">
+      <h2 class="text-2xl font-semibold mb-4">Foto Kesukaan Kita ❤️</h2>
+      <img src="foto4.jpg" alt="Foto Kesukaan" class="rounded-xl shadow mx-auto">
+      <p class="text-center mt-2 text-sm text-gray-600 italic">Foto waktu kita jalan di taman</p>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm py-6 text-gray-500">
+    &copy; 2025 Kita Berdua | Dibuat dengan cinta 🤍
+  </footer>
+
+  <script>
+    // Kalkulator berapa lama pacaran
+    const timerEl = document.getElementById('timer');
+    const startDate = new Date(); // Tanggal mulai pacaran (hari ini)
+    
+    function updateTimer() {
+      const now = new Date();
+      const diff = now - startDate;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+      timerEl.textContent = `${days} hari, ${hours} jam, ${minutes} menit, ${seconds} detik`;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+</body>
+</html>

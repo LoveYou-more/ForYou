@@ -34,21 +34,21 @@
 
   <!-- Header -->
   <header class="text-center py-10 bg-pinky rounded-b-[50px] shadow-md">
-    <h1 class="text-5xl font-bold text-purpley drop-shadow-sm">Kita Berdua 💞</h1>
-    <p class="text-lg mt-2 text-gray-700">Cerita cinta lucu yang selalu hidup!</p>
+    <h1 class="text-5xl font-bold text-purpley drop-shadow-sm">Kita Berdua</h1>
+    <p class="text-lg mt-2 text-gray-700">Cerita cinta lucu yang selalu hidup</p>
   </header>
 
   <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
 
     <!-- Timer -->
     <section class="text-center bg-white rounded-3xl p-8 shadow-lg border-4 border-pinky">
-      <h2 class="text-3xl font-bold text-accent mb-4">Sudah Berapa Lama Kita Bersama?</h2>
+      <h2 class="text-3xl font-bold text-accent mb-4">Sudah Berapa Lama Kita Bersama</h2>
       <p id="timer" class="text-2xl font-mono text-purpley"></p>
     </section>
 
     <!-- Galeri -->
     <section class="bg-white rounded-3xl p-8 shadow-lg border-4 border-purpley">
-      <h2 class="text-3xl font-bold text-accent mb-6">Galeri Kita 📸</h2>
+      <h2 class="text-3xl font-bold text-accent mb-6">Galeri Kita</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <img src="foto1.jpg" alt="Galeri 1" class="rounded-2xl shadow hover:scale-105 border-4 border-pinky aspect-square object-cover">
         <img src="foto2.jpg" alt="Galeri 2" class="rounded-2xl shadow hover:scale-105 border-4 border-pinky aspect-square object-cover">
@@ -58,16 +58,20 @@
 
     <!-- Chat Pertama -->
     <section class="bg-white rounded-3xl p-8 shadow-lg border-4 border-pinky">
-      <h2 class="text-3xl font-bold text-accent mb-6">Chat Pertama Kita 💬</h2>
+      <h2 class="text-3xl font-bold text-accent mb-6">Chat Pertama Kita</h2>
       <div class="bg-pinky p-6 rounded-2xl border-2 border-purpley text-gray-800">
-        <p class="italic text-lg">"Hai, kamu suka senja juga ya?"</p>
-        <p class="text-right text-sm mt-4 text-softText">- Kamu, waktu itu</p>
+        <div class="max-w-md mx-auto text-left">
+          <div class="bg-white p-4 rounded-xl shadow border border-purpley mb-2">
+            <p class="text-sm">Hai, kamu suka senja juga ya?</p>
+          </div>
+          <p class="text-right text-xs text-softText italic">Kamu, waktu itu</p>
+        </div>
       </div>
     </section>
 
     <!-- Foto Kesukaan -->
     <section class="bg-white rounded-3xl p-8 container shadow-lg border-4 border-purpley text-center">
-      <h2 class="text-3xl font-bold text-accent mb-6">Foto Kesukaan Kita ❤️</h2>
+      <h2 class="text-3xl font-bold text-accent mb-6">Foto Kesukaan Kita</h2>
       <img src="foto4.jpg" alt="Foto Kesukaan" class="rounded-2xl shadow-lg mx-auto border-4 w-full h-auto border-pinky max-w-md hover:rotate-1">
       <p class="mt-4 text-sm text-softText italic">Foto waktu kita jalan di taman</p>
     </section>
@@ -75,13 +79,13 @@
 
   <!-- Footer -->
   <footer class="text-center py-8 text-softText text-sm">
-    &copy; 2025 Kita Berdua | Dibuat dengan cinta dan warna-warni 🌈
+    &copy; 2025 Kita Berdua | Dibuat dengan cinta dan warna-warni
   </footer>
 
   <!-- Timer Script -->
   <script>
     const timerEl = document.getElementById('timer');
-    const startDate = new Date('2024-01-01T00:00:00'); // Ganti tanggal mulai pacaran di sini
+    const startDate = new Date('2024-01-01T00:00:00');
 
     function updateTimer() {
       const now = new Date();
